@@ -1,0 +1,23 @@
+[build-system]
+requires = ["maturin>=1.10,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "twwl"
+version = "0.1.0"
+requires-python = ">=3.13"
+description = "Implementation of Tree Wasserstein Weisfeiler-Lehman algorithm in Python"
+readme = "README.md"
+keywords = ["graph kernel", "machine learning"]
+maintainers = [ { name = "Keishi Sando", email = "sando.keishi.sp@alumni.tsukuba.ac.jp" } ]
+
+[project.urls]
+repository = "https://github.com/KeishiS/twwl"
+
+[project.optional-dependencies]
+tests = ["pytest"]
+
+[tool.maturin]
+python-source = "python"
+module-name = "twwl._twwl"
+bindings = "pyo3"
